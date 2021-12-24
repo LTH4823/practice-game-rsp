@@ -64,5 +64,6 @@
 }
 
 .board_btns i:hover {
+  cursor: pointer;
   color: rgb(0, 0, 0);
 }
