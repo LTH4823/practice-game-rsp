@@ -4,9 +4,9 @@ rack = main.querySelector(".rack"),
 sissors = main.querySelector(".sissors"), 
 paper = main.querySelector(".paper");
 
-console.log(rack);
 
 function check(){
+    console.log("check!");
 }
 
 function resultCal(){
@@ -22,7 +22,7 @@ function resultWord(){
 }
 
 function init(){
-    
+    rack.addEventListener("click",check);
 }
 
 init();
