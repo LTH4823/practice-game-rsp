@@ -3,18 +3,29 @@ rack = main.querySelector(".rack"),
 sissors = main.querySelector(".sissors"), 
 paper = main.querySelector(".paper"),
 user = main.querySelector("#user"),
-opponent = main.querySelector("#opponent");
+opponent = main.querySelector("#opponent"),
+opponentImg = opponent.getElementsByTagName("img"),
+userImg = opponent.getElementsByTagName("img");
 
-function check(){
-    console.log("check!");
+
+function check(event){
+    console.log(event);
 }
 
-function resultCal(num1,num2){
-   
-}
-
-function resultImg(num){
+function resultCal(){
     
+}
+
+function resultImg(name){
+    if(name=rack){
+        userImg.src = "../img/rack.png"
+    }else if(name=scissors){
+        userImg.src = "../img/scissors.png"
+    }else if(name=paper){
+        userImg.src = "../img/paper.png"
+    }else{
+        console.log("error!");
+    }
 }
 
 function resultWord(){
@@ -22,7 +33,7 @@ function resultWord(){
 }
 
 function init(){
-    rack.addEventListener("click",check);
+    rack.addEventListener("click",resultImg(rack));
     sissors.addEventListener("click",check);
     paper.addEventListener("click",check);
 }
