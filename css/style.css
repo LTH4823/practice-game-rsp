@@ -48,6 +48,16 @@
   margin: 10px;
 }
 
+.board_result_right,
+.board_result_left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .board_btns {
   width: 600px;
   height: 90px;
@@ -70,4 +80,23 @@
 .board_btns i:hover {
   cursor: pointer;
   color: rgb(0, 0, 0);
+}
+
+.user_title,
+.opponent_title {
+  margin: 10px;
+  font-size: 100px;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aqua;
+}
+
+.user_img {
+  width: 350px;
+  height: 350px;
+}
+
+.opponet_img {
+  width: 350px;
+  height: 350px;
 }

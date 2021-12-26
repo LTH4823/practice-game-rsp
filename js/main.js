@@ -1,6 +1,8 @@
 const main = document.querySelector("#main"),
 user = main.querySelector("#user"),
 opponent = main.querySelector("#opponent"),
+userTitle = main.querySelector(".user_title"),
+opponentTile = main.querySelector(".opponent_title"),
 userImg = user.querySelector(".user_img"),
 opponentImg = opponent.querySelector(".opponet_img"),
 btns = main.querySelector(".board_btns"),
@@ -58,7 +60,7 @@ function resultMatch(num1,num2){
     return userCount=num1, opponentCount=num2;
 }
 
-function resultWord(num1,num2){
+function resultWord(){
     if(userCount<opponentCount){
         console.log("lose");
     }else if(userCount>opponentCount){
@@ -77,6 +79,7 @@ function resultGame(num){
     opponentHandCheck(opponentCount);
     resultWord(num, opponentCount);
 }
+
 const scissorsHand = () => resultGame(0);
 const rackHand = () => resultGame(1);
 const paperHand = () => resultGame(2);
