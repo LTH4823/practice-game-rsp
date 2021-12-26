@@ -71,10 +71,16 @@ function resultMatch(num1,num2){
 function resultWord(){
     if(userCount<opponentCount){
         console.log("lose");
+        // userTitle.innerText("p");
+        // opponentTile.innerText("p");
     }else if(userCount>opponentCount){
         console.log("win");
+        // userTitle.innerText("p");
+        // opponentTile.innerText("p");
     }else if(userCount==opponentCount){
         console.log("dorw");
+        // userTitle.innerText("p");
+        // opponentTile.innerText("p");
     }else{
         console.log("error!");
     }
