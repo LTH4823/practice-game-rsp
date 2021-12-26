@@ -1,4 +1,5 @@
-const main = document.querySelector("#main"), 
+const main = document.querySelector("#main"),
+btns = document.querySelector("board_btns"), 
 rack = main.querySelector(".rack"), 
 scissors = main.querySelector(".sissors"), 
 paper = main.querySelector(".paper"),
@@ -10,69 +11,67 @@ opponentImg = opponent.querySelector(".opponet_img"),
 IMG_SIZE_WIDTH = 500,
 IMG_SIZE_HEIGHT = 500;
 
+function handCheck(num){
+    switch(num){
+        case 0:
+            console.log("scissors");   
+            break;
+        case 1:
+            console.log("rack");   
+            break;
+        case 2:
+            console.log("paper");    
+            break;
+        default: 
+            console.log("error");
+            break;
+    }
+}
+
+
 
 function oppnentHandCheck(){
     const opponentHand = Math.floor(Math.random()*3);
-    switch(opponentHand){
-        case 0:
-            console.log("rack");   
-            //opponentImg.src = "../img/rack.png" 
+    handCheck(opponentHand);
+}
+
+function userHandCheck(){
+    const userHand = Math.floor(Math.random()*3);
+    handCheck(userHand); 
+}
+
+
+function resultMatch(num1,num2){
+    switch(num1, num2){
+        case num1=0&&num2==0 : 
+            num2= num2;
             break;
-        case 1:
-            console.log("scissors");    
-            opponentImg.src = "../img/scissors.png"
+        case num1==0&&num2==2:
+            num2 = -3;
             break;
-        case 2:
-            console.log("paper");    
-            opponentImg.src = "../img/paper.png"
-            break;
-        default: 
+        case num1==2&&num1==0:
+            num1 = -3;
+            break;    
+        default:
             console.log("error");
             break;
     }
-}
-
-function userNumCheck(){
-
-}
-
-function userHandCheck(num){
-    const userHand = num;
-    switch(userHand){
-        case 0:
-            console.log("rack");   
-            //userImg.src = "../img/rack.png" 
-            break;
-        case 1:
-            console.log("scissors");    
-            userImg.src = "../img/scissors.png"
-            break;
-        case 2:
-            console.log("paper");    
-            userImg.src = "../img/paper.png"
-            break;
-        default: 
-            console.log("error");
-            break;
-    }
-    
 }
 
 function resultWord(num1, num2){
-    // if(num1<num2){
-    //     console.log("lose");
-    // }else if(num1>num2){
-    //     console.log("win");
-    // }else{
-    //     console.log("error!");
-    // }
+    if(num1<num2){
+        console.log("lose");
+    }else if(num1>num2){
+        console.log("win");
+    }else if(num1==num2){
+        console.log("dorw");
+    }else{
+        console.log("error!");
+    }
 }
 
 function init(){
-    rack.addEventListener("click",userHandCheck);
-    scissors.addEventListener("click",userHandCheck);
-    paper.addEventListener("click",userHandCheck);
-    oppnentHandCheck();
+
 }
 
 init();
