@@ -58,7 +58,11 @@
   background-color: rgb(198, 236, 230);
 }
 
-.board_btns > div {
+.board_btns > button {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
   font-size: 50px;
   color: rgb(255, 255, 255);
 }

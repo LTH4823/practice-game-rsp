@@ -1,20 +1,20 @@
 const main = document.querySelector("#main"),
-btns = document.querySelector("board_btns"), 
-rack = main.querySelector(".rack"), 
-scissors = main.querySelector(".sissors"), 
-paper = main.querySelector(".paper"),
 user = main.querySelector("#user"),
 opponent = main.querySelector("#opponent"),
 userImg = user.querySelector(".user_img"),
 opponentImg = opponent.querySelector(".opponet_img"),
-IMG_SIZE_WIDTH = 500,
-IMG_SIZE_HEIGHT = 500;
+btns = main.querySelector(".board_btns"),
+rack = btns.querySelector(".rack"),
+scissors = btns.querySelector(".scissors"),
+paper = btns.querySelector(".paper");
 
-let userCount = 0,
-opponentCount =0;
+let userCount = 0, opponentCount =0 , hand;
 
 function handCheck(num){
     switch(num){
+        case -1:
+            console.log("paper");   
+            break;
         case 0:
             console.log("scissors");   
             break;
@@ -30,14 +30,14 @@ function handCheck(num){
     }
 }
 
-function oppnentHandCheck(){
-    const opponentHand = Math.floor(Math.random()*3);
-    handCheck(opponentHand);
+function opponentHandCheck(num){
+    // const opponentHand = Math.floor(Math.random()*3);
+    handCheck(num);
 }
 
-function userHandCheck(){
-    const userHand = Math.floor(Math.random()*3);
-    handCheck(userHand); 
+function userHandCheck(num){
+    // const userHand = Math.floor(Math.random()*3);
+    handCheck(num); 
 }
 
 function resultMatch(num1,num2){
@@ -53,8 +53,7 @@ function resultMatch(num1,num2){
     return userCount=num1, opponentCount=num2;
 }
 
-function resultWord(num1, num2){
-    resultMatch(num1,num2);
+function resultWord(num1,num2){
     if(userCount<opponentCount){
         console.log("lose");
     }else if(userCount>opponentCount){
@@ -66,8 +65,15 @@ function resultWord(num1, num2){
     }
 }
 
+function resultGame(num1, num2){
+    resultMatch(num1,num2);
+    userHandCheck(userCount);
+    opponentHandCheck(opponentCount);
+    resultWord(userCount, opponentCount);
+}
+
 function init(){
-    resultWord(2,0);
+    resultGame(0,2);
 }
 
 init();
