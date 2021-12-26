@@ -11,7 +11,8 @@ scissors = btns.querySelector(".scissors"),
 paper = btns.querySelector(".paper");
 
 let userCount = 0, 
-opponentCount = 0;
+opponentCount = 0,
+hand;
 
 function check(){
     console.log("check");
@@ -21,15 +22,19 @@ function handCheck(num){
     switch(num){
         case -1:
             console.log("paper");   
+            hand = "paper"
             break;
         case 0:
             console.log("scissors");   
+            hand = "scissors"
             break;
         case 1:
             console.log("rack");   
+            hand = "rack"
             break;
         case 2:
             console.log("paper");    
+            hand = "paper"
             break;
         default: 
             console.log("error");
@@ -40,11 +45,14 @@ function handCheck(num){
 function opponentHandCheck(num){
     // const opponentHand = Math.floor(Math.random()*3);
     handCheck(num);
+    opponentImg.src="../img/"+hand+".png";
 }
 
 function userHandCheck(num){
     // const userHand = Math.floor(Math.random()*3);
     handCheck(num); 
+    console.log(hand);
+    userImg.src="../img/"+hand+".png";
 }
 
 function resultMatch(num1,num2){
