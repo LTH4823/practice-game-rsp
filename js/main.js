@@ -4,31 +4,27 @@ sissors = main.querySelector(".sissors"),
 paper = main.querySelector(".paper"),
 user = main.querySelector("#user"),
 opponent = main.querySelector("#opponent"),
-userImg = user.getElementsByTagName("img"),
-opponentImg = opponent.getElementsByTagName("img");
-console.log(rack);
+userImg = user.querySelector(".user_img"),
+opponentImg = opponent.querySelector(".opponet_img"),
 
+IMG_SIZE_WIDTH = 500,
+IMG_SIZE_HEIGHT = 500;
 
-
-function check(event){
-    console.log(event);
-}
-
-function resultCal(){
-    
-}
 
 function handCheck(){
     const opponentHand = Math.floor(Math.random()*3);
     switch(opponentHand){
         case 0:
-            console.log("rack");    
+            console.log("rack");   
+            opponentImg.src = "../img/rack.png" 
             break;
         case 1:
             console.log("scissors");    
+            opponentImg.src = "../img/scissors.png"
             break;
         case 2:
             console.log("paper");    
+            opponentImg.src = "../img/paper.png"
             break;
         default: 
             console.log("error");
@@ -63,6 +59,7 @@ function init(){
     sissors.addEventListener("click",resultImg);
     paper.addEventListener("click",resultImg);
     handCheck();
+    console.log(opponentImg);
 }
 
 init();
