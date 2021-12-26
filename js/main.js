@@ -8,7 +8,12 @@ rack = btns.querySelector(".rack"),
 scissors = btns.querySelector(".scissors"),
 paper = btns.querySelector(".paper");
 
-let userCount = 0, opponentCount =0 , hand;
+let userCount = 0, 
+opponentCount = 0;
+
+function check(){
+    console.log("check");
+}
 
 function handCheck(num){
     switch(num){
@@ -65,15 +70,23 @@ function resultWord(num1,num2){
     }
 }
 
-function resultGame(num1, num2){
-    resultMatch(num1,num2);
-    userHandCheck(userCount);
+function resultGame(num){
+    opponentCount = Math.floor(Math.random()*3);
+    resultMatch(num,opponentCount);
+    userHandCheck(num);
     opponentHandCheck(opponentCount);
-    resultWord(userCount, opponentCount);
+    resultWord(num, opponentCount);
 }
+const scissorsHand = () => resultGame(0);
+const rackHand = () => resultGame(1);
+const paperHand = () => resultGame(2);
 
-function init(){
-    resultGame(0,2);
-}
+scissors.addEventListener("click",scissorsHand);
+rack.addEventListener("click",rackHand);
+paper.addEventListener("click",paperHand);
 
-init();
+// function init(){
+    
+// }
+
+// init();
