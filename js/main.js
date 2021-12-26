@@ -7,9 +7,11 @@ user = main.querySelector("#user"),
 opponent = main.querySelector("#opponent"),
 userImg = user.querySelector(".user_img"),
 opponentImg = opponent.querySelector(".opponet_img"),
-
 IMG_SIZE_WIDTH = 500,
 IMG_SIZE_HEIGHT = 500;
+
+let userCount = 0,
+opponentCount =0;
 
 function handCheck(num){
     switch(num){
@@ -28,8 +30,6 @@ function handCheck(num){
     }
 }
 
-
-
 function oppnentHandCheck(){
     const opponentHand = Math.floor(Math.random()*3);
     handCheck(opponentHand);
@@ -40,30 +40,26 @@ function userHandCheck(){
     handCheck(userHand); 
 }
 
-
 function resultMatch(num1,num2){
-    switch(num1, num2){
-        case num1=0&&num2==0 : 
-            num2= num2;
-            break;
-        case num1==0&&num2==2:
-            num2 = -3;
-            break;
-        case num1==2&&num1==0:
-            num1 = -3;
-            break;    
-        default:
-            console.log("error");
-            break;
+    if(num1==0&&num2==2){
+        num2-=3;
+        console.log(num1, num2);
+    }else if(num1==2&&num2==0){
+        num1-=3;
+        console.log(num1, num2);
+    }else{
+        console.log(num1,num2);
     }
+    return userCount=num1, opponentCount=num2;
 }
 
 function resultWord(num1, num2){
-    if(num1<num2){
+    resultMatch(num1,num2);
+    if(userCount<opponentCount){
         console.log("lose");
-    }else if(num1>num2){
+    }else if(userCount>opponentCount){
         console.log("win");
-    }else if(num1==num2){
+    }else if(userCount==opponentCount){
         console.log("dorw");
     }else{
         console.log("error!");
@@ -71,7 +67,7 @@ function resultWord(num1, num2){
 }
 
 function init(){
-
+    resultWord(2,0);
 }
 
 init();
