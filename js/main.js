@@ -4,8 +4,10 @@ sissors = main.querySelector(".sissors"),
 paper = main.querySelector(".paper"),
 user = main.querySelector("#user"),
 opponent = main.querySelector("#opponent"),
-opponentImg = opponent.getElementsByTagName("img"),
-userImg = opponent.getElementsByTagName("img");
+userImg = user.getElementsByTagName("img"),
+opponentImg = opponent.getElementsByTagName("img");
+console.log(rack);
+
 
 
 function check(event){
@@ -16,26 +18,51 @@ function resultCal(){
     
 }
 
+function handCheck(){
+    const opponentHand = Math.floor(Math.random()*3);
+    switch(opponentHand){
+        case 0:
+            console.log("rack");    
+            break;
+        case 1:
+            console.log("scissors");    
+            break;
+        case 2:
+            console.log("paper");    
+            break;
+        default: 
+            console.log("error");
+            break;
+    }
+}
+
 function resultImg(name){
-    if(name=rack){
-        userImg.src = "../img/rack.png"
-    }else if(name=scissors){
-        userImg.src = "../img/scissors.png"
-    }else if(name=paper){
-        userImg.src = "../img/paper.png"
+    if(name=="rack"){
+        console.log("rack");
+    }else if(name=="scissors"){
+        console.log("scissors");
+    }else if(name=="paper"){
+        console.log("paper");
+    }else{
+        console.log(name);
+    }
+}
+
+function resultWord(num1, num2){
+    if(num1<num2){
+        console.log("lose");
+    }else if(num1>num2){
+        console.log("win");
     }else{
         console.log("error!");
     }
 }
 
-function resultWord(){
-
-}
-
 function init(){
-    rack.addEventListener("click",resultImg(rack));
-    sissors.addEventListener("click",check);
-    paper.addEventListener("click",check);
+    rack.addEventListener("click",resultImg);
+    sissors.addEventListener("click",resultImg);
+    paper.addEventListener("click",resultImg);
+    handCheck();
 }
 
 init();
