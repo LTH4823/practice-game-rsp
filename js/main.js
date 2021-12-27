@@ -1,14 +1,18 @@
 const main = document.querySelector("#main"),
 user = main.querySelector("#user"),
 opponent = main.querySelector("#opponent"),
-userTitle = main.querySelector(".user_title"),
-opponentTile = main.querySelector(".opponent_title"),
+userResult = main.querySelector(".user_result"),
+opponentResult = main.querySelector(".opponent_result"),
 userImg = user.querySelector(".user_img"),
 opponentImg = opponent.querySelector(".opponet_img"),
 btns = main.querySelector(".board_btns"),
 rack = btns.querySelector(".rack"),
 scissors = btns.querySelector(".scissors"),
 paper = btns.querySelector(".paper");
+
+console.log(userResult);
+
+
 
 let userCount = 0, 
 opponentCount = 0,
