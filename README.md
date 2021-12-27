@@ -1,2 +1,3 @@
-# practice-js
- practice js
+# make game rack scissors paper
+
+practice for vanilajs
