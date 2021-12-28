@@ -81,10 +81,28 @@ function resultGame(num){
     resultWord(num, opponentCount);
 }
 
+function handContraller(event){
+    switch(event.target.className){
+        case "rack" : 
+            rackHand()
+            break;
+        case "scissors" : 
+            scissorsHand()
+            break;
+        case "paper" : 
+            paperHand()
+            break;
+        default :
+            break;
+
+    }
+}
+
 function init(){
-    scissors.addEventListener("click",scissorsHand);
-    rack.addEventListener("click",rackHand);
-    paper.addEventListener("click",paperHand);
+    // scissors.addEventListener("click",scissorsHand);
+    // rack.addEventListener("click",rackHand);
+    // paper.addEventListener("click",paperHand);
+    btns.addEventListener("click",handContraller);
 }
 
 init();
