@@ -70,6 +70,7 @@ function resultWord(){
         opponentResult.innerText = "drow";
     }else{
         console.log("error!");
+        return;
     }
 }
 
@@ -94,7 +95,6 @@ function handContraller(event){
             break;
         default :
             break;
-
     }
 }
 
