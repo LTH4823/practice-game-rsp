@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practice Javascript</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <script src="js/main.js" defer></script>
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <!-- <script src="js/main.js" defer></script> -->
+    <script src="js/hand.js" defer></script>
+  </head>
+  <body>
     <div id="main">
-        <div class="board">
-            <div class="board_title">
-                <p>Starting Rack! Sissors! Paper!</p>
-            </div>
-            <div class="board_result">
-                <div class="board_result_left">
-                    <div id="user">
-                        <p class="user_title">User</p>
-                        <p class="user_result"></p>
-                        <img class="user_img" src="img/question.png"> 
-                    </div>
-                </div>
-                <div class="board_result_right">
-                    <div id="opponent">
-                        <p class="opponent_title">Opponent</p>
-                        <p class="opponent_result"></p>
-                        <img class="opponet_img" src="img/question.png">
-                    </div>
-                </div>
-            </div>
-            <div class="board_btns">
-                <button class="rack"><i class="far fa-hand-rock"></i></button>
-                <button class="scissors"><i class="far fa-hand-scissors"></i></button>
-                <button class="paper"><i class="far fa-hand-paper"></i></button>
-            </div>
+      <div class="board">
+        <div class="board_title">
+          <p>Starting Rack! Sissors! Paper!</p>
         </div>
+        <div class="board_result">
+          <div class="board_result_left">
+            <div id="user">
+              <p class="user_title">User</p>
+              <p class="user_result"></p>
+              <img class="user_img" src="img/question.png" />
+            </div>
+          </div>
+          <div class="board_result_right">
+            <div id="opponent">
+              <p class="opponent_title">Opponent</p>
+              <p class="opponent_result"></p>
+              <img class="opponet_img" src="img/question.png" />
+            </div>
+          </div>
+        </div>
+        <div class="board_btns">
+          <button class="rack"><i class="far fa-hand-rock"></i></button>
+          <button class="scissors"><i class="far fa-hand-scissors"></i></button>
+          <button class="paper"><i class="far fa-hand-paper"></i></button>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
