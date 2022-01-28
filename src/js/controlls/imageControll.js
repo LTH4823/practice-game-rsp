@@ -1,3 +1,10 @@
+const user = document.querySelector("#user"),
+  userResult = user.querySelector(".user_result"),
+  userImg = user.querySelector(".user_img"),
+  opponent = document.querySelector("#opponent"),
+  opponentResult = opponent.querySelector(".opponent_result"),
+  opponentImg = opponent.querySelector(".opponet_img");
+
 let hand;
 
 function handCheck(num) {
@@ -23,7 +30,6 @@ export function opponentHandCheck(num) {
   handCheck(num);
   opponentImg.src = "../src/img/" + hand + ".png";
 }
-
 export function userHandCheck(num) {
   handCheck(num);
   userImg.src = "../src/img/" + hand + ".png";
