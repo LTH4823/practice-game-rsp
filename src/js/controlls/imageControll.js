@@ -1,9 +1,4 @@
-const user = document.querySelector("#user"),
-  userResult = user.querySelector(".user_result"),
-  userImg = user.querySelector(".user_img"),
-  opponent = document.querySelector("#opponent"),
-  opponentResult = opponent.querySelector(".opponent_result"),
-  opponentImg = opponent.querySelector(".opponet_img");
+import { userImg, opponentImg } from "../parameter/parameter.js";
 
 let hand;
 

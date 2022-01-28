@@ -1,9 +1,5 @@
+import { userResult, opponentResult } from "../parameter/parameter.js";
 import { userHandCheck, opponentHandCheck } from "./imageControll.js";
-
-const user = document.querySelector("#user"),
-  userResult = user.querySelector(".user_result"),
-  opponent = document.querySelector("#opponent"),
-  opponentResult = opponent.querySelector(".opponent_result");
 
 let userCount = 0,
   opponentCount = 0;

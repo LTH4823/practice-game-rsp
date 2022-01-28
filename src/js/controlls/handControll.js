@@ -1,4 +1,4 @@
-import { resultGame } from "./checkControll.js";
+import { resultGame } from "./resultControll.js";
 
 const scissorsHand = () => resultGame(0);
 const rackHand = () => resultGame(1);
