@@ -1,0 +1,27 @@
+{
+  "name": "practice-game-rsp",
+  "version": "1.0.0",
+  "description": "practice for vanilajs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LTH4823/practice-game-rsp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LTH4823/practice-game-rsp/issues"
+  },
+  "homepage": "https://github.com/LTH4823/practice-game-rsp#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11"
+  },
+  "type": "module"
+}
