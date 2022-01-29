@@ -1,8 +1,9 @@
 @import "reset.css";
 @import "./component/user.css";
 @import "./component/board.css";
+@import "./media/media.css";
 
-#main {
+.main {
   width: 100vw;
   height: 100vh;
   display: flex;
