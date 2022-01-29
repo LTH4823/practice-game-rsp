@@ -23,9 +23,9 @@ function handCheck(num) {
 }
 export function opponentHandCheck(num) {
   handCheck(num);
-  opponentImg.src = "../src/img/" + hand + ".png";
+  opponentImg.src = "src/img/" + hand + ".png";
 }
 export function userHandCheck(num) {
   handCheck(num);
-  userImg.src = "../src/img/" + hand + ".png";
+  userImg.src = "src/img/" + hand + ".png";
 }
